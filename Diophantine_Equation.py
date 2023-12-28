@@ -1,4 +1,4 @@
-# solving for all integer solutions to the equation n = x^2-4y^2
+# solving for all integer solutions to the equation n = x^2-4y^2 (5kyu kata)
 from math import sqrt
 
 def sol_equa(n):
