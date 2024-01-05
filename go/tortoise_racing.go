@@ -5,19 +5,15 @@ package kata
 import ("fmt")
 
 func Race(v1, v2, g int) [3]int {
-  fmt.Print(v1, " ", v2, " ", g, "\n")
   if v2 < v1 { return [3]int{-1,-1,-1} }
 
   r := v2 - v1
   t := float64(g)/float64(r)
-//   fmt.Print(g, "/", r, "=>", t, "\n")
   
   h := int(t)
   m := int(((t - float64(h)) * 60) + .0000000001)
   fmt.Print("minutes: ", (t - float64(h)) * 60)
   s := int((((t - float64(h)) * 60) - float64(m)) * 60)
-  fmt.Print("\nseconds: ", (((t - float64(h)) * 60) - float64(m)) * 60, "\n")
-//   fmt.Print("hours: ", h, " minutes: ", m, " seconds: ", s, "\n")
   return [3]int{h,m,s}
 }
 
